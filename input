@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear + c.violet + "Hey, what's your name?" + c.reset)
+name = c.violet + input("> " + c.red)
+
+if name is "Ben":
+  print("CORRECT!")
+else:
+  print(c.violet + "What are you doing here, " + c.reset + c.red + name + c.reset + c.violet + "?")
