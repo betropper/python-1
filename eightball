@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+import time
+
+count_length = (1.5)
+
+input(c.clear + c.red + '''Care for your fortune?''' + c.reset)
+
+def bye():
+    print()
+    print(c.magenta + 'Come again any time.' + c.x)
+    exit()
+
+def ask_name():
+    print(c.magenta + 'The fortunes smile upon us. What is your name?' + c.x)
+    name = input('> ')
+    return name
+
+def tell_fortune():
+    print(c.random_color() + random.choice(fortunes) + c.reset)
+
+name = ask_name()
+print(c.magenta + 'What a lovely name, ' + name + '. Now for your fortune...' + c.x)
+time.sleep(count_length)
+fortunes = [
+    '''You will loose everything. ''',
+    '''You will forget that which you mustn't.''',
+    'You will meet another by the name of ' + name + '.',
+    'You will find your worst fear to be laughable.',
+    name + ' will be an honored name for generations.',
+    'You will find that you are stronger than you know.',
+    '''A friend will soon bear good news.''',
+    '''Your children will be named ''' + name + '.',
+    '''Good fortune will soon bless all ''' + name + 's.',
+    '''An old friend will rembember the name ''' + name + ''', and come for a visit.''',
+    '''Who can say what YOUR fortune is, ''' + name + '?',
+    '''Don't look behind you.''',
+    '''Don't take your friends for granted.''',
+    '''Remember to drink your Ovaltine.''',
+    name + '''? I see nothing for your near future. Try again.''',
+    '''Great things are headed your way.''',
+    '''If you do not take action, I cannot tell what your fate will be.''',
+    '''Do not travel in your near future.''',
+    '''Regret will soon overcome you.''',
+]
+
+tell_fortune()
+
+while True:
+    time.sleep(count_length)
+    input(c.magenta + 'Care for another fortune? Then hit enter.' + c.x)
+    tell_fortune()
