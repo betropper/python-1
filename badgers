@@ -4,8 +4,7 @@ import time
 import colors as c
 
 count_length = .387
-
-print(c.x, end = '')
+print(c.cl + c.x, end = '')
 while True:
     for n in range(5):
         print(c.red + 'A badger' + c.x)

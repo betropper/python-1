@@ -19,7 +19,7 @@ def ask_name():
     return name
 
 def tell_fortune():
-    print(c.random_color() + random.choice(fortunes) + c.reset)
+    print(c.red + random.choice(fortunes) + c.reset)
 
 name = ask_name()
 print(c.magenta + 'What a lovely name, ' + name + '. Now for your fortune...' + c.x)
