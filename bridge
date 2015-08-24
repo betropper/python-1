@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+def ask(question):
+    print(c.red + question + c.reset)
+    answer = input("> ").lower().strip()
+    print(c.reset)
+    return answer
+
+def clr():
+    c.clear + c.random_color()
+def wrong():
+    while True:
+        print(c.random_color() + "WRONG!" + c.reset)
+def right():
+    print(c.random_color() + 'CORRECT!' + c.reset)
+print(c.clear)
+ayylmao = ask('Left handed or right handed?')
+if ayylmao in ['left', 'left handed']:
+    cake = ask('Cake or death?')
+    if cake == 'cake':
+        right()
+        soda = ask('Coke or Pepsi?')
+        if soda == 'coke':
+            right()
+            print(c.cyan + '''You win, but I don't have anything to give you!''')
+        elif soda == 'pepsi':
+            print(c.red + '''Your tastes are bad and you should feel bad.''')
+        else:
+            wrong()
+    elif cake == 'death':
+        wrong()
+    else:
+        print('Huh?')
+elif ayylmao in ['right', 'right handed']:
+    flavor = ask('Chocolate or vanilla?')
+    if flavor == 'chocolate':
+        wrong()
+    elif flavor == 'vanilla':
+        right()
+        age = ask("How old am I?")
+        age = int(age)
+        if age == 18:
+            right()
+            print("You win! That was a hard one.")
+        elif age < 22 and age > 15 and age != 18:
+            print("You got close, but wrong. Come again later!")
+        else:
+            wrong()
+    else:
+        print("Hey, one of the two! Try again!")
+else:
+    wrong()
+

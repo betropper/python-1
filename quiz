@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+import random
+
+print(c.clear)
+
+which = ask("Are you in Python 1, or Python 2"?)
+if which in ["python 1", "1"]:
+    import python1quiz as quiz
+elif which in ["python 2", "2"]:
+    import python2quiz as quiz
+else:
+    print("That's not an option!")
+print(c.clear + quiz.intro)
+
+
+def question_function():
+    random.choice(quiz.questions)
+
+while quiz.questions:
+    question_function = random.choice(quiz.questions):
+    while not question_function():
+        answer = input(c.reset + c.red + "> " + c.reset + c.cyan).lower().strip()
+        if answer in answerlist:
+            break
+        else:
+            pass
+        pass
