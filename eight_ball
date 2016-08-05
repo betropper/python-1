@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+print(c.clear)
+print(c.red + '''
+I AM THE BALL OF EIGHT NUMBERS.
+ASK ME AND YE SHALL RECIEVE ANSWERS, MORTAL.
+''')
+
+answers = [
+    'Stop shaking me so hard.',
+    'Nah.',
+    "That's a dumb question. Ask another.",
+    'The future is hazy.',
+    'Ask later.',
+    'YEEEESSSSSS.',
+    'Well, perhaps.',
+    'u w0t m8',
+    'Why would you even ask that?',
+    '''
+        YYY         YYY
+         YYY       YYY
+          YYY     YYY
+            YYYYYYY
+             YYYYY
+              YYY
+              YYY
+              YYY
+    ''',
+"""
+                              OOOOOOOO     
+N:::::::N       N::::::N   OO:::::::::OO   
+N::::::::N      N::::::N OO:::::::::::::OO 
+N:::::::::N     N::::::NO:::::::OOO:::::::O
+N::::::::::N    N::::::NO::::::O   O::::::O
+N:::::::::::N   N::::::NO:::::O     O:::::O
+N:::::::N::::N  N::::::NO:::::O     O:::::O
+N::::::N N::::N N::::::NO:::::O     O:::::O
+N::::::N  N::::N:::::::NO:::::O     O:::::O
+N::::::N   N:::::::::::NO:::::O     O:::::O
+N::::::N    N::::::::::NO:::::O     O:::::O
+N::::::N     N:::::::::NO::::::O   O::::::O
+N::::::N      N::::::::NO:::::::OOO:::::::O
+N::::::N       N:::::::N OO:::::::::::::OO 
+N::::::N        N::::::N   OO:::::::::OO   
+NNNNNNNN         NNNNNNN     OOOOOOOOO     
+    """
+]
+
+def handle_question():
+    question = input(c.rc() + "> ")
+    if question == 'ayy':
+        print(c.magenta + "lmao")
+    elif 'love' in question:
+        print(c.red + "Why are you asking me about love? I'm an eight ball.")
+    else:
+        answer = random.choice(answers)
+        print(c.rc() + answer + c.reset)
+
+while True:
+    try:
+        handle_question()
+    except KeyboardInterrupt:
+        print()
+        print(c.cyan + "Okay, well, bye, I guess.")
+        exit()
