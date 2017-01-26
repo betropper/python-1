@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import colors as c
+import skilstak.colors as c
 import random
 
 print(c.clear)
@@ -49,8 +49,12 @@ NNNNNNNN         NNNNNNN     OOOOOOOOO
     """
 ]
 
-def handle_question():
-    question = input(c.rc() + "> ")
+ 
+print(b.handleQuestion(question,answers))
+
+whattheysay = input(c.rc() + "> ")
+
+def handle_question(question,answers):
     if question == 'ayy':
         print(c.magenta + "lmao")
     elif 'love' in question:
@@ -61,7 +65,7 @@ def handle_question():
 
 while True:
     try:
-        handle_question()
+        handle_question(whattheysay,answers)
     except KeyboardInterrupt:
         print()
         print(c.cyan + "Okay, well, bye, I guess.")

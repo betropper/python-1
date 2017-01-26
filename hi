@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-import colors as c
+import skilstak.colors as c
 
 print(c.red + "Hello, what's your name?")
-name = input("Name: ")
+
+name = input(c.yellow + "> ")
+
 print("How are you today, " + name +  "?")
